@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <?php
 
 $db = [
@@ -23,27 +36,31 @@ $db = [
         ]
     ];
  
-?>
 
-<!-- <ul>
-    <?php
-    for ($i = 0; $i < count($partite); $i++) {
-    ?>
-        <li>
-            <?php
-            echo "{$partite[$i]['home']} - {$partite[$i]['away']} | "
-            ?>
-            <strong>
-                <?php
-                echo "{$partite[$i]['homeScore']} - {$partite[$i]['awayScore']}"
-                ?>
-            </strong>
-        </li>
+
+ foreach ($db['teachers'] as $value) {
+?>
+    <div class="gray" style="background-color:gray; padding: 10px 15px">
+        <?=
+        "{$value['name']} {$value['lastname']}";
+        ?>
+    </div>
     <?php
     }
     ?>
-</ul> -->
 
-<div>
-    
-</div>
+    <?php
+    foreach ($db['pm'] as $value) {
+    ?>
+        <div class="green" style="background-color:green; padding: 10px 15px">
+            <?=
+            "{$value['name']} {$value['lastname']}";
+            ?>
+        </div>
+    <?php
+    }
+    ?>
+
+</body>
+
+</html>
