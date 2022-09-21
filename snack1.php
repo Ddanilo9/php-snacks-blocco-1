@@ -28,21 +28,3 @@ $partite = [
 // echo '<pre>' . var_export($partite, true) . '</pre>';
 ?>
 
-<ul>
-    <?php
-    for ($i = 0; $i < count($partite); $i++) {
-    ?>
-        <li>
-            <?php
-            echo "{$partite[$i]['home']} - {$partite[$i]['away']} | "
-            ?>
-            <strong>
-                <?php
-                echo "{$partite[$i]['homeScore']} - {$partite[$i]['awayScore']}"
-                ?>
-            </strong>
-        </li>
-    <?php
-    }
-    ?>
-</ul>
